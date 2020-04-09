@@ -30,6 +30,7 @@ export class AuthService {
   //   })
   //   .catch(err => console.log("Error: " + err));
   // }
+  //
 
   logout() {
     this.AFauth.auth.signOut().then(() => {
