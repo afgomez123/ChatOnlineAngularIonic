@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-button slot="end" fill="clear"  (click)="presentActionSheet()">
+      <ion-icon style="color:#fff" name="menu"></ion-icon>
+    </ion-button>
+
+    <ion-title slot="start">
+      Chat de la empresa
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  
+      <ion-img style="height:300px;width:100%; " src="https://user-images.githubusercontent.com/10589755/29107602-89773dd0-7d0d-11e7-934b-5d072f62efdb.png" ></ion-img>
+  <ion-list>
+
+    <ion-item >
+      <!-- siempre utilizar la url de descarga y no la de almacenamiento -->
+
+      <ion-label>
+        <!-- <h2>titulo</h2>
+        <p>descr</p> -->
+      </ion-label>
+    </ion-item>
+    <ion-button expand="block" (click)="leerQr()">Scan Qr</ion-button>
+ 
+  </ion-list>
+  <!-- <ion-button (click)="onLogout()" expand="block">Salir</ion-button> -->
+</ion-content>

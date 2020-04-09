@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-button slot="end" fill="clear" (click)="presentActionSheet()">
+      <ion-icon style="color:#fff" name="menu"></ion-icon>
+    </ion-button>
+
+    <ion-title slot="start">
+      Chat de la empresa
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item *ngFor="let chat of chatsRooms" (click)="openChat(chat)">
+      <!-- siempre utilizar la url de descarga y no la de almacenamiento -->
+      <ion-avatar slot="start">
+        <ion-img [src]="chat.img"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        <h2><b>{{chat.name}}</b></h2>
+        <p>{{chat.description}}</p>
+      </ion-label>
+    </ion-item>
+
+
+  </ion-list>
+  <!-- <ion-button (click)="onLogout()" expand="block">Salir</ion-button> -->
+</ion-content>

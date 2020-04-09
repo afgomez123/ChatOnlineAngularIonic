@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title text-center>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+<br>
+
+<ion-content padding>
+  <img src="assets/icon/register.svg" class="icon">
+  <ion-item>
+    <ion-label position="floating">Nombre:</ion-label>
+    <ion-input type="text" [(ngModel)]="name" #validar="ngModel" name="name" required></ion-input>
+
+
+
+
+
+
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Email:</ion-label>
+    <ion-input type="email" [(ngModel)]="email" name="email" #validar="ngModel"
+      pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required></ion-input>
+    <p> {{validar.errors}}</p>
+
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Pass:</ion-label>
+    <ion-input type="password" [(ngModel)]="password" name="password" #validar="ngModel" required></ion-input>
+  </ion-item>
+
+  <br>
+  <ion-button color="secondary" *ngIf="validar.error " expand="block" (click)="onSubmitRegistrar()">
+    Registrarse</ion-button>
+  <br>
+  <p text-center routerLink="/login">Ya tengo cuenta</p>
+</ion-content>
